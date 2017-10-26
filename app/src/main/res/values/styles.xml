@@ -8,4 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="KLAppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/kis_white</item>
+        <item name="colorPrimaryDark">@color/kis_syndicate_dark_grey</item>
+        <item name="android:colorAccent">@color/kis_syndicate_dark_grey</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/kis_white</item>
+        <item name="actionMenuTextColor">@color/kis_syndicate_dark_grey</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorControlActivated">@color/kis_red</item>
+        <item name="searchViewStyle">@style/Base.Widget.AppCompat.SearchView</item>
+    </style>
+
 </resources>

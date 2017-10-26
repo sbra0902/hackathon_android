@@ -3,4 +3,17 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="kis_light_grey">#c4c4c4</color>
+    <color name="kis_lighter_grey">#e7e7e7</color>
+    <color name="kis_opacity_light_grey">#40d3d3d3</color>
+    <color name="kis_red">#e10916</color>
+    <color name="kis_filter_red">#e20915</color>
+    <color name="kis_light_red">#f20310</color>
+    <color name="kis_dark_red">#76050b</color>
+    <color name="kis_dark_grey">#7a7a7a</color>
+    <color name="kis_syndicate_light_grey">#e7e7e7</color>
+    <color name="kis_filter_light_grey">#e8e8e8</color>
+    <color name="kis_green">#7fba4e</color>
+    <color name="kis_white">#ffffff</color>
+    <color name="kis_syndicate_dark_grey">#424242</color>
 </resources>

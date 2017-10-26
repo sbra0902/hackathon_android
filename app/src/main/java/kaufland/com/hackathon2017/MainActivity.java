@@ -1,13 +1,30 @@
 package kaufland.com.hackathon2017;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.app.Activity;
+import android.support.v7.widget.Toolbar;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+/**
+ * Created by sbra0902 on 26.10.17.
+ */
+@EActivity(R.layout.activity_main)
+public class MainActivity extends Activity {
+
+    @ViewById(R.id.toolbar)
+    protected Toolbar mToolbar;
+
+    @ViewById(R.id.title_fix)
+    protected TextView mTitle;
+
+
+
+    @AfterViews
+    public void init(){
+
+        mTitle.setText("Übersicht");
     }
 }

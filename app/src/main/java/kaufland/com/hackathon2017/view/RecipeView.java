@@ -1,0 +1,46 @@
+package kaufland.com.hackathon2017.view;
+
+import android.content.Context;
+import android.support.annotation.Nullable;
+import android.util.AttributeSet;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import org.androidannotations.annotations.EViewGroup;
+import org.androidannotations.annotations.ViewById;
+
+import kaufland.com.hackathon2017.R;
+
+/**
+ * Created by sbra0902 on 26.10.17.
+ */
+@EViewGroup(R.layout.recipe_view_item)
+public class RecipeView extends LinearLayout{
+
+    @ViewById(R.id.img_picture)
+    protected ImageView mImageView;
+
+    @ViewById(R.id.txt_title)
+    protected TextView mTitle;
+
+    public RecipeView(Context context) {
+        super(context);
+    }
+
+    public RecipeView(Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public RecipeView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+    public RecipeView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+    }
+
+    public void bind(){
+
+    }
+}

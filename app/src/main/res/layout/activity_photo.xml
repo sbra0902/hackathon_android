@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="kaufland.com.hackathon2017.PhotoActivity">
+
+    <com.google.android.cameraview.CameraView
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:adjustViewBounds="true"
+        app:autoFocus="true"
+        app:aspectRatio="4:3"
+        app:facing="back"
+        app:flash="auto"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/btn_take_picture"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom|center_horizontal"
+        app:cardBackgroundColor="@color/kis_red"
+        app:cardCornerRadius="10dp"
+        android:text="@string/take_picture"/>
+
+</FrameLayout>
