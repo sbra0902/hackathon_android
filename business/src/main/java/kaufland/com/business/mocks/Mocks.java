@@ -32,7 +32,7 @@ import kaufland.com.business.model.RecipeSearchResultModel;
 public class Mocks {
 
     @RootContext
-    private static Context context;
+    protected static Context context;
 
     private static final Type REVIEW_TYPE = new TypeToken<List<RecipeSearchResultModel>>() {
     }.getType();
