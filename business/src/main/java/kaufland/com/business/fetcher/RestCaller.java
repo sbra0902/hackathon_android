@@ -15,6 +15,7 @@ import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 
 import kaufland.com.business.rest.HackApi;
+import okhttp3.OkHttpClient;
 import okhttp3.ResponseBody;
 import okhttp3.internal.Util;
 import retrofit2.Response;
@@ -39,7 +40,11 @@ public class RestCaller {
 
     @AfterInject
     public void init() {
-        mAPI = HackApi.retrofit.create(HackApi.class);
+        mAPI = new Retrofit.Builder()
+                .client(new OkHttpClient())
+                .baseUrl("https://southcentralus.api.cognitive.microsoft.com/customvision/v1.0/")
+                .addConverterFactory(GsonConverterFactory.create(new Gson()))
+                .build().create(HackApi.class);
     }
 
     public InputStream invoke(RestInvoker invoker) throws Exception {
