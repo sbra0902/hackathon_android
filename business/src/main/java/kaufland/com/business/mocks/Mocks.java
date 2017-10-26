@@ -32,12 +32,12 @@ import kaufland.com.business.model.RecipeSearchResultModel;
 public class Mocks {
 
     @RootContext
-    protected static Context context;
+    protected Context context;
 
     private static final Type REVIEW_TYPE = new TypeToken<List<RecipeSearchResultModel>>() {
     }.getType();
 
-    static List<RecipeSearchResultModel> getRecipies(){
+    public List<RecipeSearchResultModel> getRecipies(){
         Gson gson = new Gson();
         List<RecipeSearchResultModel> resultModelList = new ArrayList<>();
         try {
