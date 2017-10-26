@@ -28,6 +28,12 @@ public class RecipeView extends LinearLayout{
     @ViewById(R.id.txt_title)
     protected TextView mTitle;
 
+    @ViewById(R.id.txt_description)
+    protected TextView mDescription;
+
+    @ViewById(R.id.txt_rating)
+    protected TextView mRating;
+
     public RecipeView(Context context) {
         super(context);
     }
@@ -47,6 +53,11 @@ public class RecipeView extends LinearLayout{
     public void bind(RecipeSearchResultModel model){
 
         mTitle.setText(model.getRecipeName());
+
+        mRating.setText(model.getRid());
+
+
+//        mDescription.setText(model.getCooking()[0]);
 
 
         Glide.with(getContext())
