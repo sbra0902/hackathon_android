@@ -18,6 +18,7 @@ import org.androidannotations.annotations.ViewById;
 
 import kaufland.com.business.fetcher.BackgroundWorker;
 import kaufland.com.business.fetcher.RecipeFetcher;
+import kaufland.com.business.mocks.Mocks;
 import kaufland.com.hackathon2017.R;
 
 /**
@@ -32,6 +33,9 @@ public class Overview extends FrameLayout {
 
     @Bean
     protected OverviewViewAdapter mAdapter;
+
+    @Bean
+    protected Mocks mMocks;
 
     public Overview(@NonNull Context context) {
         super(context);
@@ -54,6 +58,7 @@ public class Overview extends FrameLayout {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 //        mRecyclerView.addItemDecoration(new SpacesItemDecoration((int) getResources().getDimension(R.dimen.offer_spacing), 1));
         mRecyclerView.setAdapter(mAdapter);
+        mAdapter.update(mMocks.getRecipies());
 
     }
 }
