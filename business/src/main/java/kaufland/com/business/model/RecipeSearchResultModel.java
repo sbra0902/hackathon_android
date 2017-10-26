@@ -62,6 +62,16 @@ public class RecipeSearchResultModel {
     //[JsonProperty("rid")]
     public String rid;
 
+    public String matchingPercentage;
+
+
+    public String getMatchingPercentage() {
+        return matchingPercentage;
+    }
+
+    public void setMatchingPercentage(String matchingPercentage) {
+        this.matchingPercentage = matchingPercentage;
+    }
 
     public String getId() {
         return id;
