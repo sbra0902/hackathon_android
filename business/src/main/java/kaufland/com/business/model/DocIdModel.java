@@ -1,4 +1,4 @@
-﻿package main.java.kaufland.com.business.model;
+package kaufland.com.business.model;
 
 public class DocIdModel {
 

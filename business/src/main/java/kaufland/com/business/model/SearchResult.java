@@ -1,8 +1,10 @@
-﻿package main.java.kaufland.com.business.model;
+package kaufland.com.business.model;
 
 
 import java.util.ArrayList;
 import java.util.List;
+
+import kaufland.com.business.model.Answer;
 
 public class SearchResult {
 

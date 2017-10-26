@@ -7,9 +7,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
 import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
+import kaufland.com.business.model.RecipeSearchResultModel;
 import kaufland.com.hackathon2017.R;
 
 /**
@@ -40,7 +44,17 @@ public class RecipeView extends LinearLayout{
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
-    public void bind(){
+    public void bind(RecipeSearchResultModel model){
+
+        mTitle.setText(model.getRecipeName());
+
+
+        Glide.with(getContext())
+                .load(model.getImageUrl())
+                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                .placeholder(R.drawable.ic_kaufland_placeholder)
+                .fitCenter()
+                .into(mImageView);
 
     }
 }
