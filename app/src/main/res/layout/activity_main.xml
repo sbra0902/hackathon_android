@@ -64,4 +64,8 @@
 
     </android.support.v7.widget.Toolbar>
 
+    <kaufland.com.hackathon2017.view.Overview_
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></kaufland.com.hackathon2017.view.Overview_>
+
 </LinearLayout>

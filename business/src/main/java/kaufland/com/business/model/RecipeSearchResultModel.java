@@ -62,6 +62,8 @@ public class RecipeSearchResultModel {
     //[JsonProperty("rid")]
     public String rid;
 
+    public Integer matchingPercentage;
+
 
     public String getId() {
         return id;
@@ -213,5 +215,13 @@ public class RecipeSearchResultModel {
 
     public void setRid(String rid) {
         this.rid = rid;
+    }
+
+    public Integer getMatchingPercentage() {
+        return matchingPercentage;
+    }
+
+    public void setMatchingPercentage(Integer matchingPercentage) {
+        this.matchingPercentage = matchingPercentage;
     }
 }

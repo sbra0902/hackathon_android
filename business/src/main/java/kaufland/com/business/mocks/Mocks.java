@@ -1,10 +1,8 @@
 package kaufland.com.business.mocks;
 
 import android.content.Context;
-import android.graphics.Path;
 import android.net.Uri;
 import android.os.Build;
-import android.provider.MediaStore;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -12,12 +10,12 @@ import com.google.gson.stream.JsonReader;
 
 import org.androidannotations.annotations.EBean;
 import org.androidannotations.annotations.RootContext;
+import org.apache.commons.io.IOUtils;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Type;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,8 +39,11 @@ public class Mocks {
         Gson gson = new Gson();
         List<RecipeSearchResultModel> resultModelList = new ArrayList<>();
         try {
+            InputStream inputStream = context.getResources().openRawResource(R.raw.recipes);
+
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                resultModelList = gson.fromJson(new JsonReader(new FileReader(Uri.parse("android.resource://" + context.getPackageName() + "/" + R.raw.RecipiesMock1).toString())), REVIEW_TYPE);
+                resultModelList = gson.fromJson( IOUtils.toString(inputStream), REVIEW_TYPE);
             }
         } catch (IOException e) {
 

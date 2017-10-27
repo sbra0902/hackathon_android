@@ -54,7 +54,9 @@ public class RecipeView extends LinearLayout{
 
         mTitle.setText(model.getRecipeName());
 
-        mRating.setText(model.getRid());
+        mDescription.setText(model.getCooking()[0]);
+
+        mRating.setText(model.getMatchingPercentage() + "%");
 
 
 //        mDescription.setText(model.getCooking()[0]);

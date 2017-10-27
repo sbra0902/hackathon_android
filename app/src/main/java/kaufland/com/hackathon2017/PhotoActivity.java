@@ -36,24 +36,28 @@ public class PhotoActivity extends AppCompatActivity {
             @Override
             public void onPictureTaken(CameraView cameraView, byte[] data) {
                 super.onPictureTaken(cameraView, data);
-                mRecipeFetcher.fetchAsync(new BackgroundWorker.BackgroundWorkerCallback<List<RecipeSearchResultModel>>() {
-                    @Override
-                    public void onStartFetch() {
+//                mRecipeFetcher.fetchAsync(new BackgroundWorker.BackgroundWorkerCallback<List<RecipeSearchResultModel>>() {
+//                    @Override
+//                    public void onStartFetch() {
+//
+//                    }
+//
+//                    @Override
+//                    public void onError(Exception e) {
+//
+//                    }
+//
+//                    @Override
+//                    public void onResult(List<RecipeSearchResultModel> result) {
+//                        Intent intent = new Intent(PhotoActivity.this, MainActivity_.class);
+//                        startActivity(intent);
+//                        finish();
+//                    }
+//                }, PhotoActivity.this, data);
 
-                    }
-
-                    @Override
-                    public void onError(Exception e) {
-
-                    }
-
-                    @Override
-                    public void onResult(List<RecipeSearchResultModel> result) {
-                        Intent intent = new Intent(PhotoActivity.this, MainActivity_.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                }, PhotoActivity.this, data);
+                Intent intent = new Intent(PhotoActivity.this, MainActivity_.class);
+                startActivity(intent);
+                finish();
 
             }
         });
